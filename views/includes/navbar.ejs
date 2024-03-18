@@ -28,6 +28,30 @@
     font-size: 1rem;
   }
 
+  .title-div {
+    height: 4rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all 1s;
+  }
+
+  .wanderlust {
+    color:#fe424d;
+    font-weight: 800;
+    font-size: 1.3rem;
+    margin-right: 1rem;
+  }
+
+  .title-div a:hover {
+    text-decoration: underline;
+  }
+
+  .side-nav a:hover {
+    text-decoration: underline;
+  }
+
 </style>
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
@@ -36,7 +60,8 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
+        <div class="navbar-nav title-div">
+          <label for="wanderlust" class="wanderlust">WanderLust</label>
           <a class="nav-link" href="/listings">Explore</a>
         </div>
         <div class="navbar-nav ms-auto">
@@ -45,7 +70,7 @@
             <button class="btn btn-search my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
           </form>
         </div>
-        <div class="navbar-nav ms-auto">
+        <div class="navbar-nav ms-auto side-nav">
           <a class="nav-link" href="/listings/new">Airbnb your home</a>
           <% if(!currUser) { %>
           <a class="nav-link" href="/signup"><b>Signup</b></a>
